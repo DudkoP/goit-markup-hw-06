@@ -266,7 +266,6 @@ header{
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
-    min-height: 580px;
     min-width: 525px;
     background-color: var(--color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -297,7 +296,7 @@ header{
 }
 
 .modal-content{
-    margin: 40px;
+    padding: 40px;
 }
 
 .modal-content b{
@@ -408,6 +407,14 @@ header{
     color: #757575;
 }
 
+.checkbox:hover, .checkbox:hover .check-box{
+    cursor: pointer;
+}
+
+.checkbox:hover .check-box{
+    border: 1.5px solid var(--color-blue);
+}
+
 .policy .checkbox a {
     font-weight: 400;
     font-size: 14px;
@@ -421,16 +428,20 @@ header{
     position: absolute;
     width: 16px;
     height: 15px;
-    border: 1px solid #000000;
+    border: 1.5px solid #000000;
     border-radius: 2px;
     margin-left: -28px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-box + a{
+    padding-left: 5px;
 }
 
 .policy-checkbox:checked + .check-box{
-    background-color: var(--color-blue);
     background-image: url(../image/icon-checked-blue.svg);
     background-size: contain;
-    border-color: var(--color-blue);
+    background-color: var(--color-blue);
 }
 
 .send-button{
